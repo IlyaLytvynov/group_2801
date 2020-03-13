@@ -1,0 +1,15 @@
+.btn {
+  background: red;
+}
+
+.btn.active {
+  background: green;
+}
+
+.block {
+  display: none;
+}
+
+.block.active {
+  display: block;
+}
