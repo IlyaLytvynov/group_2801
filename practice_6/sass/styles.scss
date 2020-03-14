@@ -1,0 +1,28 @@
+.lighter {
+  width: 100px;
+  margin: 0 auto;
+  border: 1px solid black;
+  &__light {
+    border-radius: 50%;
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    border: 1px solid black;
+    &_red {
+      &.active {
+        background-color: red;
+      }
+    }
+    &_yellow {
+      &.active {
+        background-color: yellow;
+      }
+    }
+    &_green {
+      &.active {
+        background-color: green;
+      }
+    }
+  }
+}
