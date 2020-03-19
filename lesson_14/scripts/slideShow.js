@@ -1,3 +1,5 @@
+import { createPager } from './pager.js';
+
 const slideShowRoot = document.querySelector('.slideshow');
 const slides = document.querySelectorAll('.slideshow__slide');
 const [prevControl, nextControl] = document.querySelectorAll(
@@ -51,30 +53,15 @@ function addDynamicStyles() {
   }
 }
 
-function createPager() {
-  const pagerRoot = document.createElement('ul');
-  pagerRoot.classList.add('pager');
-
-  for (let i = 0; i < slides.length; i++) {
-    const li = document.createElement('li');
-    const button = document.createElement('button');
-    li.classList.add('pager__item');
-    button.classList.add('pager__btn');
-    button.addEventListener('click', () => {
-      toggleOffPrev();
-      activeSlideIndex = i;
-      toggleOnNext();
-    });
-    li.append(button);
-    pagerRoot.append(li);
-  }
-
-  slideShowRoot.append(pagerRoot);
+function setSlide(newIndex) {
+  toggleOffPrev();
+  activeSlideIndex = newIndex;
+  toggleOnNext();
 }
 
 function initSlider() {
   addDynamicStyles();
-  createPager();
+  createPager(slideShowRoot, slides.length, setSlide);
   addEventListeners();
 }
 

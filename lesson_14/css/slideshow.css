@@ -28,19 +28,4 @@
   display: block;
 }
 
-.pager {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-}
-.pager__btn {
-  border-radius: 50%;
-  background: rgba(7, 7, 7, 0.787);
-  width: 15px;
-  height: 15px;
-}
-
 /*# sourceMappingURL=slideshow.css.map */

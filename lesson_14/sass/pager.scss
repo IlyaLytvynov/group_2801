@@ -1,0 +1,19 @@
+.pager {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  &__btn {
+    $btn-size: 15px;
+    border-radius: 50%;
+    background: rgba(7, 7, 7, 0.787);
+    width: $btn-size;
+    height: $btn-size;
+    &_active {
+      background: red;
+    }
+  }
+}
