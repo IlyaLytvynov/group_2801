@@ -1,1 +1,2 @@
-import './slideShow.js';
+import { initSlider } from './slideShow.js';
+initSlider();

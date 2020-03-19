@@ -1,6 +1,7 @@
 .slideshow {
   width: 600px;
   margin: 150px auto;
+  position: relative;
   &__slides {
     width: 100%;
     display: flex;
@@ -13,12 +14,6 @@
     flex-shrink: 0;
     visibility: hidden;
     opacity: 0;
-    &:nth-child(2) {
-      transform: translateX(-100%);
-    }
-    &:nth-child(3) {
-      transform: translateX(-200%);
-    }
     &.animate {
       transition: all 0.2s;
     }
@@ -30,5 +25,21 @@
   &__frame {
     width: 100%;
     display: block;
+  }
+}
+
+.pager {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  &__btn {
+    $btn-size: 15px;
+    border-radius: 50%;
+    background: rgba(7, 7, 7, 0.787);
+    width: $btn-size;
+    height: $btn-size;
   }
 }
