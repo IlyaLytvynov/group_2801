@@ -1,0 +1,14 @@
+.page__main {
+  display: flex;
+  height: 100vh;
+}
+.page__sidebar {
+  width: 300px;
+  background-color: rgba(209, 209, 209, 0.541);
+  flex-shrink: 0;
+}
+.page__content {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=page.css.map */

@@ -1,38 +1,50 @@
-import {
-  toString,
-  totalSum,
-  mapArray,
-  findMax,
-  getTotalPrice,
-  filterMaxValues
-} from './functions.js';
+import { productList } from './productList.js';
+import { createCart } from './cart.js';
 
-const str = toString(['Hello', 'world']);
-console.log(str);
-const cartTotal = totalSum([10, '20', 50, 100]);
-console.log(cartTotal);
-const strLength = ['Hello', 'worldфывфыв'].map(item => {
-  return item.length;
-});
-console.log(strLength);
-const max = findMax([10, 20, 10, 5, 26, 100]);
-console.log(max);
-
-const cart = [
+const sideBar = document.querySelector('.page__sidebar');
+const content = document.querySelector('.content');
+const header = document.querySelector('header');
+const phones = [
   {
     name: 'Iphone',
-    price: 1400
+    price: 1400,
+    id: '0'
   },
   {
     name: 'MacBook',
-    price: 3000
+    price: 3000,
+    sale: true,
+    id: '1'
   },
   {
     name: 'Samsung galaxy',
-    price: 1200
+    price: 1200,
+    id: '2'
+  },
+  {
+    name: 'Samsung galaxy 10',
+    price: 1800,
+    id: '3'
   }
 ];
 
-const totalPrice = getTotalPrice(cart);
-const filteredValues = filterMaxValues([0, 23, 45, 15, 48, 20, 24, 55], 40);
-console.log('FILTERD VALUES', filteredValues);
+const courses = [
+  {
+    name: 'Js for beginners',
+    price: 250,
+    id: '0'
+  },
+  {
+    name: 'C++ for advanced',
+    price: 200,
+    id: '1'
+  },
+  {
+    name: '.NET for freelancers',
+    price: 180,
+    id: '2'
+  }
+];
+createCart(header);
+productList(sideBar, phones);
+productList(content, courses);

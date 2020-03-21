@@ -1,0 +1,15 @@
+.page {
+  &__main {
+    display: flex;
+    height: 100vh;
+  }
+
+  &__sidebar {
+    width: 300px;
+    background-color: rgba(209, 209, 209, 0.541);
+    flex-shrink: 0;
+  }
+  &__content {
+    flex-grow: 1;
+  }
+}
