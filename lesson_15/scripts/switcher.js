@@ -2,6 +2,7 @@ function Switcher(rootElement, lamp) {
   this.rootElement = rootElement;
   this.lamp = lamp;
 }
+
 Switcher.prototype.render = function() {
   this.btn = document.createElement('button');
   this.btn.style.background = 'aqua';
