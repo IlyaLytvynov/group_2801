@@ -1,3 +1,5 @@
+import { Ajax } from '../../common/scripts/Ajax.js';
+
 class SlideShow {
   constructor(rootElement) {
     this.rootElement = rootElement;
@@ -15,14 +17,11 @@ class SlideShow {
   }
 
   getData() {
-    const xhr = new XMLHttpRequest();
-    xhr.open(
-      'GET',
+    const request = new Ajax(
       'https://my-json-server.typicode.com/ilyalytvynov/ads-box-server/ads'
     );
-    xhr.send();
-    xhr.onload = () => {
-      const data = JSON.parse(xhr.response);
+    const successHandler = responseData => {
+      const data = JSON.parse(responseData);
       for (let obj of data) {
         const li = document.createElement('li');
         const img = document.createElement('img');
@@ -40,6 +39,7 @@ class SlideShow {
         this.slides.append(li);
       }
     };
+    request.get(successHandler);
   }
 }
 

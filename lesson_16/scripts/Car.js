@@ -20,13 +20,14 @@ class Car {
 
   initInterval() {
     const self = this;
-
-    setInterval(() => {
+    const intervalHandler = () => {
+      // callback
       console.log('second');
       console.log(self, this); // потеря контекста
       this.coordinates.x += 10;
       this.element.style.transform = `translateX(${this.coordinates.x}px)`;
-    }, 300);
+    };
+    setInterval(intervalHandler, 300);
   }
 }
 
