@@ -15,6 +15,17 @@ class Ajax {
     };
     console.log('5');
   }
+
+  post(successHandler, data) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', this.url);
+    xhr.setRequestHeader('content-type', 'application/json');
+    const sendData = typeof data === 'string' ? data : JSON.stringify(data);
+    xhr.send(sendData);
+    xhr.onload = () => {
+      successHandler(xhr.response);
+    };
+  }
 }
 
 export { Ajax };
