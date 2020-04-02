@@ -1,0 +1,21 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/scripts -d build/scripts",
+    "build:sass": "src/sass sass:css",
+    "watch:sass": "sass src/sass:build/css --watch",
+    "watch:js": "babel --watch src/scripts -d build/scripts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "sass": "^1.26.3"
+  }
+}

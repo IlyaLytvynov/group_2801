@@ -1,0 +1,23 @@
+{
+  "name": "group_2802",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaLytvynov/group_2801.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlyaLytvynov/group_2801/issues"
+  },
+  "homepage": "https://github.com/IlyaLytvynov/group_2801#readme",
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "sass": "^1.26.3"
+  }
+}

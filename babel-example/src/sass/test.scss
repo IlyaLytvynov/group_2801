@@ -1,0 +1,9 @@
+body {
+  background: aqua
+}
+.tes {
+  &__hello {
+    background: yellow;
+
+  }
+}
