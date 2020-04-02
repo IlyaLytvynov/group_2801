@@ -28,6 +28,6 @@ class HelloMessage extends React.Component {
 }
 
 ReactDOM.render(
-  <HelloMessage name='Илья' />,
+  <HelloMessage name={prompt('ENter name')} />,
   document.querySelector('.hello-example')
 );
