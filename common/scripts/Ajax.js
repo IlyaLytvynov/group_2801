@@ -16,14 +16,20 @@ class Ajax {
     console.log('5');
   }
 
-  post(successHandler, data) {
+  post(successHandler, errorHandler, data) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', this.url);
     xhr.setRequestHeader('content-type', 'application/json');
     const sendData = typeof data === 'string' ? data : JSON.stringify(data);
     xhr.send(sendData);
     xhr.onload = () => {
+      if (xhr.status >= 400) {
+        return errorHandler(xhr);
+      }
       successHandler(xhr.response);
+    };
+    xhr.onerror = () => {
+      errorHandler(xhr);
     };
   }
 }
